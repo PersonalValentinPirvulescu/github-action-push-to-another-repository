@@ -54,7 +54,7 @@ fi
 
 echo "Copy contents to target git repository"
 #cp -ra "$SOURCE_DIRECTORY"/. "$TARGET_DIR"
-rm -d -f -r "$SOURCE_DIRECTORY"/.git
+rm -rf "$SOURCE_DIRECTORY"/.git
 cp -ra "$SOURCE_DIRECTORY"/. "$TARGET_DIR"
 cd "$TARGET_DIR"
 
