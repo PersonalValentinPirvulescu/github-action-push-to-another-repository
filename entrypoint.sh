@@ -54,7 +54,8 @@ fi
 
 echo "Copy contents to target git repository"
 #cp -ra "$SOURCE_DIRECTORY"/. "$TARGET_DIR"
-cp -r "$SOURCE_DIRECTORY"/!(.git) "$TARGET_DIR"
+rm -d "$SOURCE_DIRECTORY"/.git
+cp -ra "$SOURCE_DIRECTORY"/. "$TARGET_DIR"
 cd "$TARGET_DIR"
 
 echo "Files that will be pushed:"
