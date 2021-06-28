@@ -54,6 +54,7 @@ fi
 
 echo "Copy contents to target git repository"
 cp -ra "$SOURCE_DIRECTORY"/. "$TARGET_DIR"
+mv "$CLONE_DIR/.git" "$TARGET_DIR"
 cd "$TARGET_DIR"
 
 echo "Files that will be pushed:"
