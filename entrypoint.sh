@@ -55,6 +55,7 @@ fi
 echo "Copy contents to target git repository"
 #cp -ra "$SOURCE_DIRECTORY"/. "$TARGET_DIR"
 #mv "$CLONE_DIR/.git" "$TARGET_DIR"
+apt install rsync
 rsync -ra "$SOURCE_DIRECTORY"/. "$TARGET_DIR" --exclude '.git'
 cd "$TARGET_DIR"
 
